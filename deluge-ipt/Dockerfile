@@ -1,4 +1,4 @@
-FROM perdjesk/deluge-libtorrent:latest
+FROM linuxserver/deluge:13
 LABEL org.freenas.interactive="false"                                                           \
       org.freenas.version="1.3.11"                                                              \
       org.freenas.upgradeable="false"                                                           \
@@ -7,7 +7,7 @@ LABEL org.freenas.interactive="false"                                           
       org.freenas.web-ui-protocol="http"                                                        \
       org.freenas.web-ui-port=8112                                                              \
       org.freenas.web-ui-path=""                                                                \
-      org.freenas.port-mappings="8112:8112/tcp,58846:58846/tcp,6881:65534/tcp,6881:65534/udp"   \
+      org.freenas.port-mappings="8112:8112/tcp,58846:58846/tcp,58946:58946/tcp,58946:58946/udp" \
       org.freenas.volumes="[                                                                    \
           {                                                                                     \
               \"name\": \"/config\",                                                            \
@@ -16,10 +16,6 @@ LABEL org.freenas.interactive="false"                                           
           {                                                                                     \
               \"name\": \"/downloads\",                                                         \
               \"descr\": \"Downloads volume\"                                                   \
-          },                                                                                    \
-          {                                                                                     \
-              \"name\": \"/log\",                                                               \
-              \"descr\": \"Log file location\"                                                  \
           }                                                                                     \
       ]"                                                                                        \
       org.freenas.settings="[                                                                   \
