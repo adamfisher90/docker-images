@@ -1,4 +1,4 @@
-FROM linuxserver/deluge:latest
+FROM adamfisher90/docker-deluge-1.3.11:latest
 LABEL org.freenas.interactive="false"                                                           \
       org.freenas.version="1.3.11"                                                              \
       org.freenas.upgradeable="false"                                                            \
